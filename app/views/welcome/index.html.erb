@@ -1,0 +1,21 @@
+<h1>Gonadmailer</h1>
+<p><%= flash[:notice] if flash[:notice] %></p>
+
+<%= form_for :email, url: send_email_path do |form| %>
+
+  
+  <%= form.label :from, "Email From:" %>
+  <%= form.text_field :from, value: "whocares@email.com" %>
+
+  <%= form.label :to, "Email To:" %>
+  <%= form.text_field :to , value: "dwkns@me.com" %>
+
+  <%= form.label :subject, "Subject" %>
+  <%= form.text_field :subject , value: "nadia hatees spulling mitooks" %>
+
+  <%= form.label :message, "Message" %>
+  <%= form.text_area :message , value: "Here is the message"%>
+
+  <%= form.submit "Send Email" %>
+
+<% end %>
